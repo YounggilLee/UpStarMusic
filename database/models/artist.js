@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const AlbumSchema = require('./album')
 const Schema = mongoose.Schema
 
-const Artistchema = new Schema({
+const ArtistSchema = new Schema({
     name: String,
     age: Number,
     yearsActive: Number,
@@ -16,4 +16,6 @@ const Artistchema = new Schema({
     albums: [AlbumSchema]
 })
 
-module.exports = Artistchema
+const Artist = mongoose.model('artist', ArtistSchema)
+
+module.exports = Artist
